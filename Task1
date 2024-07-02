@@ -1,0 +1,178 @@
+// Task-1
+
+// Quiz Game 
+
+/*
+
+Develop a simple quiz game that presents multiple-choice questions to the
+user. The game should keep track of the user's score and provide feedback
+based on their answers.
+
+*/
+
+#include<iostream>
+using namespace std;
+
+
+
+int PlayQuiz()
+{
+    playinsidefunction:
+    cout<<"        -------- Welcome to the QUIZ GAME --------\n\n";
+    cout<<" --------Please, Carefully Read the  of the Game--------\n"<<endl;
+
+    cout<<"I1). There will be total 5 questions in this quiz game. "<<endl;
+    cout<<"I2). Each question carries 2 marks, Maximum marks that can be scored is 10."<<endl;
+    cout<<"I3). There will be no negative marking."<<endl;
+    cout<<"I4). Press S or s to start the Quiz Game."<<endl;
+    cout<<"I5) Please, Choose one option out of A, B ,C, D "<<endl;
+    cout<<"I6) If you score greater than or equal to 6, you will pass the Quiz Game."<<endl;
+
+    int score=0;
+
+    char c;
+    cout<<"Enter S or s to start the quiz : ";
+    cin>>c;
+
+    if(c=='s'|| c=='S')
+    {
+        cout<<"Q-1)\n\n";  
+        cout<<"Which of the three banks will be merged with the other two to create India's third largest ?"<<endl;
+        cout<<"A) Punjab National Bank\nB) Indian Bank\n";
+        cout<<"C) Bank of Baroda\nD) Dena Bank\n\n";
+        cout<<"Enter your option :";
+        char InpAns1;
+        cin>>InpAns1;
+        if(InpAns1=='b'||InpAns1=='B')
+        {
+            score+=2;
+        }
+        else
+        {
+            score+=0;
+        }
+
+        cout<<"Q-2)\n\n";  
+        cout<<"What is the name of the weak zone of the earth's crust ?"<<endl;
+        cout<<"A) Seismic\nB) Cosmic\n";
+        cout<<"C) Formic\nD) Anaemic\n\n";
+        cout<<"Enter your option :";
+        char InpAns2;
+        cin>>InpAns2;
+        if(InpAns2=='a'||InpAns2=='A')
+        {
+            score+=2;
+        }
+        else
+        {
+            score+=0;
+        }
+
+        cout<<"Q-3)\n\n";  
+        cout<<"Where was the India's first national Museum opened ?"<<endl;
+        cout<<"A) Delhi\nB) Hyderabad\n";
+        cout<<"C) Rajasthan\nD) Mumbai\n\n";
+        cout<<"Enter your option :";
+        char InpAns3;
+        cin>>InpAns3;
+        if(InpAns3=='d'||InpAns3=='D')
+        {
+            score+=2;
+        }
+        else
+        {
+            score+=0;
+        }
+
+        cout<<"Q-4)\n\n";  
+        cout<<"In 2019, which popular singer was awarded the Bharat Ratna award ?"<<endl;
+        cout<<"A) Lata Mangeshkar\nB) Asha Bhosle\n";
+        cout<<"C) Bhupen Hazarika\nD) Manna Dey\n\n";
+        cout<<"Enter your option :";
+        char InpAns4;
+        cin>>InpAns4;
+        if(InpAns4=='c'||InpAns4=='C')
+        {
+            score+=2;
+        }
+        else
+        {
+            score+=0;
+        }
+
+        cout<<"Q-5)\n\n";  
+        cout<<"The world's nation 5G mobile network was launched by which country?"<<endl;
+        cout<<"A) Japan\nB) Asia\n";
+        cout<<"C) South Korea\nD) Malaysia\n\n";
+        cout<<"Enter your option :";
+        char InpAns5;
+        cin>>InpAns5;
+        if(InpAns4=='c'||InpAns4=='C')
+        {
+            score+=2;
+        }
+        else
+        {
+            score+=0;
+        }
+
+
+
+
+    }
+    
+    else
+    {
+        cout<<"Entered character is not matching, please Enter s or S to start the quiz."<<endl;
+        goto playinsidefunction;
+    }
+
+
+    return score;
+
+}
+
+
+int main()
+{
+
+    int marks;
+    char playmore;
+    int PlayQuiz(void);
+    play:
+    marks=PlayQuiz();
+    cout<<"Your Total score is "<<marks;
+
+    if(marks>=6){
+       cout<<" & You have Passed it Successfully."<<endl;
+       cout<<"Do you want to play it again, Yes or No ?"<<endl;
+       cin>>playmore;
+       if(playmore=='y'|| playmore=='Y')
+       {
+            goto play;
+       }
+       else 
+       {
+        cout<<"THANK YOU for participating in the quiz."<<endl;
+       }
+
+       
+       }
+
+    else 
+       cout<<" & You're failed. "<<endl;
+       cout<<"Do you want to play it again, Yes or No ?"<<endl;
+       cin>>playmore;
+       if(playmore=='y'|| playmore=='Y')
+       {
+             goto play;
+       }
+       else 
+       {
+        cout<<"THANK YOU for participating in the quiz."<<endl;
+       }
+    
+
+
+    return 0;
+}
